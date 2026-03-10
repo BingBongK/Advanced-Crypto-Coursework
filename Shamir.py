@@ -109,9 +109,6 @@ def Reconstruct(filename, s1, s2,l1, l2):
 
 clients = read_clients("task1_clients.txt")
 #print(clients)
-
-
-
 #Create servers
 HQ = Server(1)
 server2 = Server(2)
