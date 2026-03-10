@@ -2,7 +2,7 @@ import numpy as np
 import random
 import ast
 
-from sympy.solvers.diophantine.diophantine import reconstruct
+#from sympy.solvers.diophantine.diophantine import reconstruct
 
 # a class or function that implements a client (i.e. including the share function)
 # a class or function that implements a server (i.e. aggregation, and reconstruct)
@@ -52,7 +52,7 @@ class Server:
         return ((0 - b.partyID) / (self.partyID-b.partyID)% p)
 
 #Read from data file
-def read_clients(filename):
+def ReadClients(filename):
     with open(filename, "r") as f:
         data = f.read().strip()
 
@@ -107,7 +107,7 @@ def Reconstruct(filename, s1, s2,l1, l2):
 
 
 
-clients = read_clients("task1_clients.txt")
+clients = ReadClients("task1_clients.txt")
 #print(clients)
 #Create servers
 HQ = Server(1)
